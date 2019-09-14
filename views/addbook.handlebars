@@ -1,0 +1,44 @@
+<div style="margin-left: 150px; margin-top: 30px;">
+    <center>
+        <form id ="form" action="/addbook" method="post" >
+            <div class="col-lg-6">
+                <table class="table table-bordered" width="100%" style="table-layout:fixed">
+                    <tbody>
+                        <tr>
+                            <td>ISBN号</td>
+                            <td><input type="text" name ="isbn" id="isbn" style="width: 100%; height:100%; "></td>
+                        </tr>
+                        <tr>
+                            <td>书名</td>
+                            <td><input type="text" name ="title" id="title" style="width: 100%; height:100%; "></td>
+                        </tr>
+                        <tr>
+                            <td>作者</td>
+                            <td><input type="text" name ="author" id="author" style="width: 100%; height:100%; "></td>
+                        </tr>
+                        <tr>
+                            <td>类别</td>
+                            <td><input type="text" name ="type" id="type" style="width: 100%; height:100%; "></td>
+                        </tr>
+                        <tr>
+                            <td>出版社</td>
+                            <td><input type="text" id="press" name="press" style="width: 100%; height:100%; "></td>
+                        </tr>
+                        <tr>
+                            <td>简介</td>
+                            <td><input name="comment" id="comment" style="width: 100%; height:100%"> </input></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button  id="bt" style="width: 50%; margin-right:60%; " type="submit" > 添加图书 </button>
+        </form>
+
+    </center>
+</div>
+<table id="tab1" border="1" style="text-align: center; width: 800px; margin-left: 150px;  margin-top: 10px;">
+    <thead>
+        <tr style="background-color:rgb(60, 77, 148)">
+        </tr>
+        </tbody>
+</table>

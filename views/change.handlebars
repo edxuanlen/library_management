@@ -1,0 +1,66 @@
+<body>
+    <div>
+      <ul id="dataList">
+
+      </ul>
+    </div>
+    {{!-- <script> alert("{{dataisbn}}")</script> --}}
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/handlebars.min.js"></script>
+    <!-- 创建一个script标签，把type属性改为：text/x-handlebars-template -->
+    <script id="table-template" type="text/x-handlebars-template">
+     
+  <script type="text/javascript" src="./index.js"></script>
+
+  </body>
+
+      <form id ="form" action="/change" method="post" >
+                            {{!-- <script> alert({{data}}) </script> --}}
+            <div class="col-lg-6">
+                <table class="table table-bordered" width="100%" style="table-layout:fixed">
+                    <tbody>
+                        <tr> 
+                            <td>isbn</td>
+                            <td>title</td>
+                            <td>author</td>
+                            <td>type</td>
+                            <td>press</td>
+                            <td>state</td>
+                            <td>bookcode</td>
+                            <td>delete</td>
+                        </tr>
+                           {{#each data}}
+                           {{!-- {{#each }} --}}
+                        <tr>
+                            <td><input type="text" name ="isbn" id="isbn" style="width: 100%; height:100%;" value = "{{this.isbn}}" ></td>
+                   
+                            <td><input type="text" name ="title" id="title" style="width: 100%; height:100%; " value="{{this.title}}" ></td>
+
+                            <td><input type="text" name ="author" id="author" style="width: 100%; height:100%; " value="{{this.author}}"></td>
+
+                            <td><input type="text" name ="type" id="type" style="width: 100%; height:100%; " value="{{this.type}}"></td>
+
+                            <td><input type="text" id="press" name="press" style="width: 100%; height:100%; " value="{{this.press}}" ></td>
+
+                            <td><input name="comment" id="comment" style="width: 100%; height:100%" value="{{this.state}}" > </input></td>
+
+                            <td><input name="comment" id="comment" style="width: 100%; height:100%" value="{{this.bookcode}}" > </input></td>
+
+                            <td><input type="checkbox" name="checkbox" value="{{this.bookcode}}"></td>
+
+                        </tr>{{/each}}
+                               {{!-- {{/each}} --}}
+                    </tbody>
+                </table>
+            </div>
+            <button  id="bt" style="width: 50%; margin-right:60%; " type="submit" > 删除 </button>
+        </form>
+
+  </script>
+<table id="tab1" border="1" style="text-align: center; width: 800px; margin-left: 150px;  margin-top: 10px;">
+    <thead>
+        <tr style="background-color:rgb(60, 77, 148)">
+        </tr>
+        </tbody>
+</table>
+

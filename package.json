@@ -1,0 +1,40 @@
+{
+  "name": "libcsystem",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "connect-flash": "^0.1.1",
+    "consolidate": "0.4.0",
+    "cookie-parser": "~1.4.3",
+    "crypto": "^1.0.1",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.1",
+    "handlebars": "^4.0.5",
+    "hbs": "^4.0.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "mysql": "^2.11.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "description": "Libsystem === 使用Express+Mysql搭建的图书馆流通管理系统 ---",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edxuanlen/libsystem.git"
+  },
+  "author": "edxuanlen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edxuanlen/libsystem/issues"
+  },
+  "homepage": "https://github.com/edxuanlen/libsystem#readme"
+}
