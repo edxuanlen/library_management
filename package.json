@@ -1,0 +1,31 @@
+{
+  "name": "library_magement",
+  "version": "1.0.0",
+  "description": "## 需求分析",
+  "main": "app.js",
+  "dependencies": {
+    "_fsevents@1.2.9@fsevents": "^1.2.9",
+    "_pm2@3.5.1@pm2": "^3.5.1",
+    "cookie-parser": "^1.4.4",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.2",
+    "fsevents": "^1.2.9",
+    "hbs": "^4.0.4",
+    "mysql": "^2.17.1",
+    "pm2": "^3.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edxuanlen/library_magement.git"
+  },
+  "author": "edxuanlen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edxuanlen/library_magement/issues"
+  },
+  "homepage": "https://github.com/edxuanlen/library_magement#readme"
+}
