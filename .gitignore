@@ -5,3 +5,6 @@ node_modules
 
 # Ignore Windows desktop setting file
 desktop.ini
+
+
+package-lock.json
