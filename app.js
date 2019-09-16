@@ -67,7 +67,7 @@ app.use(function(req, res, next) {
   res.render('404');
   // var err = new Error('Not Found');
   // err.status = 404;
-  next(err);
+  // next(err);
 });
 
 // 错误的统一处理
