@@ -59,14 +59,20 @@ app.use(function(req,res,next){
   next();
 });
 
+app.use('/logup', require('./routes/logup'))
+app.use('/email', require('./routes/email'))
+app.use('/signup', require('./routes/signup'))
+
 app.use('/',routes);
 app.use('/mylib',mylib);
 
 // 捕获404并定向到错误处理
 app.use(function(req, res, next) {
-  res.render('404');
   // var err = new Error('Not Found');
   // err.status = 404;
+  // console.log(err);
+  res.status=404
+  res.render('404');
   // next(err);
 });
 

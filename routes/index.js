@@ -6,14 +6,23 @@ let User=require('../models/user');
 let Book=require('../models/book');
 let Borrow=require('../models/borrow');
 let crypto = require('crypto');
-let mysql = require('mysql')
+let mysql = require('mysql');
+
+let app = express();
+
+// 分发路由
+
+
+// app.use('/logup', require('./logup'))
+
+
+
 function cryptoPwd(password){
 	let md5 = crypto.createHash('md5');
 	return md5.update(password).digest('hex');
 }
 
 
-let app = express();
 //跳转搜索页
 router.get('/',function(req,res){
 	res.redirect('/search');
@@ -37,7 +46,7 @@ router.get('/search/r',function(req,res,next) {
 	if(searchType == 0)
 		Book.findBooksByTitle(content,function(err,books){
 		if(err){
-			return next(err);//使用return XXX 的写法是为了在发错误时不会出现res重复响应状况 
+			return next(err);//使用return XXX 的写法是为了在发错误时不会出现res重复响应状况
 		}
 		books.forEach(function(book){
 			if(book.type==0){
@@ -247,6 +256,7 @@ router.get('/addbook',function(req,res){
 		arr:[{sch:'',lib:'',abt:'active',log:''}]
 	});
 });
+
 var db=require('../models/dbhelper');
 var query=require('../models/database').query
 router.post('/addbook',function(req,res,next){
@@ -281,7 +291,7 @@ router.get('/change', async(req,res) => {
 		}
 		// console.log(rows)
 		rows = JSON.parse(JSON.stringify(rows))
-		console.log(rows);
+		// console.log(rows);
 		res.render('change',{
 			title:'减少书本数量',
 			data: rows,
@@ -322,11 +332,11 @@ router.post('/infochange',function(req,res,next){
 	// UPDATE table_name
 	// SET column1=value1,column2=value2,...
 	// WHERE some_column=some_value;
-	
+
 	let sql="update reader set name = ?, sex = ?, creditNum = ?, phone = ?, email = ? , maxBorrow = ? where readerId = ?";
 	let insert= [name, sex, creditNum, phone, email, maxBorrow, readerId];
 	sql = mysql.format(sql, insert);
-	console.log(sql);
+	// console.log(sql);
 	db.exec(sql,'',function(err,rows){
 		if(err){
 			console.log(err);

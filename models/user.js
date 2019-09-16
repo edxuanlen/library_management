@@ -22,7 +22,7 @@ User.findUserByreaderId=function(readerId, callback){
 		}
 		if(rows[0].id == 250) rows[0].id = 0;
 		//rows是一个对象数组
-		console.log(rows[0]);
+		// console.log(rows[0]);
 		callback(err,rows[0]);
 	});
 };

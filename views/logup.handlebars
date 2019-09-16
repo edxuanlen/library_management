@@ -1,0 +1,63 @@
+<!-- 登录页 -->
+<div class='container'>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">注册用户</h4>
+        </div>
+
+        <div class="panel-body">
+            <div class="row Login-box">
+                <div class="col-lg-4 col-lg-offset-4">
+                    {{!-- <form action="/login" method="POST" class="form-signin" role="form">
+                            <input type="text" class="form-control" name="username" placeholder="学号/工号" required=""
+                                autofocus="true">
+                            <input style="margin-top:10px;" type="password" class="form-control" name="password"
+                                placeholder="密码" required="">
+                            <input id="referer" type="hidden" name="referer">
+                        <script type="text/javascript">
+                            console.log(document.referrer);
+                            var referer = document.getElementById('referer');
+                            referer.setAttribute('value', document.referrer);
+                        </script>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me">记住密码
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+                    </form> --}}
+
+
+                    <form id="register" class="register_content" target="nm_iframe">
+                        <input id="name" name="Name" class="form-control" style="margin:5px" placeholder="名称">
+                        <input id="email" name="EmailNumber" class="form-control" style="margin:5px" placeholder="邮箱">
+
+                        <td>
+                            <input id="vcode" name="vcode" class="register_input" style="margin:5px" placeholder="验证码">
+                            <input type="button" id="send_v" class="register_but" style="margin:5px" style="margin:5px"
+                                value="发送验证码">
+                        </td>
+                        <p id="wrong" style="display: none; position:absolute; left:20%;"> 该用户已注册,请直接<p
+                                style="color: red;display: none; top:150px; padding-left:200px;cursor: pointer"
+                                id="LoginAgain">登录
+                            </p>
+                        </p>
+
+                        <input id="password" name="Password" class="form-control" type="password" style="margin:5px"
+                            placeholder="设置密码">
+                        <p>6-12位密码，包括字母/数字/符号</p>
+
+                        <input type="button" id="continue1" class="login_but BUT_HOVER" value="注册">
+                        <!-- <img src=" images/on.png" id="show"> -->
+                    </form>
+                    <iframe id="id_iframe" name="nm_iframe" style="display:none;"> </iframe>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {{>footer}}
+</div>

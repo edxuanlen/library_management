@@ -33,6 +33,13 @@
 - public
 
 
+## Debug
+
+### nodemon
+
+https://nodemon.io/
+
+
 
 更新中。。。
 

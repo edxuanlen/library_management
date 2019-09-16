@@ -13,14 +13,17 @@
     "debug": "~2.6.9",
     "express": "~4.13.4",
     "express-handlebars": "^3.0.0",
+    "express-mysql": "0.0.1",
     "express-session": "^1.14.1",
     "handlebars": "^4.0.5",
     "hbs": "^4.0.1",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "mysql": "^2.11.1",
+    "nodemailer": "^6.3.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "string-random": "^0.1.3"
   }
 }
