@@ -13,17 +13,21 @@ module.exports=User;
 //根据证件号查找用户
 User.findUserByreaderId=function(readerId, callback){
 	// var sql="SELECT*FROM reader WHERE readerId='"+readerId+"';";
-	let sql = "select * from reader where readerId = ? ";
+	let sql = "select * from reader where email = ? ";
 	let inserts = [readerId];
 	sql = mysql.format(sql, inserts);
+	// console.log(sql)
+	// console.log("AGAIN")
 	db.exec(sql,'',function(err,rows){
 		if(err){
 			return callback(err);
 		}
-		if(rows[0].id == 250) rows[0].id = 0;
-		//rows是一个对象数组
-		// console.log(rows[0]);
-		callback(err,rows[0]);
+		if( rows[0] && ("id" in rows[0]) ){
+
+			if(rows[0].id == 250) rows[0].id = 0;
+			console.log(rows)
+			callback(err,rows[0]);
+		}
 	});
 };
 

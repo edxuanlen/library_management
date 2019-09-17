@@ -5,6 +5,9 @@ var Borrow=require('../models/borrow');
 //当前借阅
 router.get('/myborrow',ensureAuthenticated,function(req,res,next){
 	var readerId=res.locals.user.readerId;
+	// console.log(readerId)
+	console.log("ggg")
+	console.log(res.locals.user)
 	Borrow.findNowBorrow(readerId,function(err,borrows){
 		if(err){
 			return next(err);
