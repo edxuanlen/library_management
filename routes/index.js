@@ -240,6 +240,9 @@ passport.serializeUser(function (user, done) {
 
 // deserializeUser 在每次请求的时候将会根据用户名读取 从 session 中读取用户的全部数据
 // 的对象，并将其封装到 req.user
+
+
+// BUGWAIT
 passport.deserializeUser( async (username, done) => {
 	if(username == 'root')
 		username = "250"

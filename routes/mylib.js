@@ -91,7 +91,7 @@ router.get('/history',ensureAuthenticated,function(req,res,next){
 //证件信息
 router.get('/info',ensureAuthenticated,function(req,res){
 	var userInfo=res.locals.user;
-	if(userInfo.sex=='m'){
+	if(userInfo.sex=='男'){
 		userInfo.sex='男';
 	}else{
 		userInfo.sex='女';
