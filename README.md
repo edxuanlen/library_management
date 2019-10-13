@@ -5,10 +5,16 @@
 ```sh
 git clone https://github.com/edxuanlen/library_management.git
 cd library_management
-npm start //即可在本地运行
-
-如果想托管后台也可以用
+npm start 
 ```
+
+后台托管的方式
+```sh
+nohup npm start &
+```
+
+默认输出到nohup.out
+
 
 ## 需求分析
 
@@ -70,11 +76,7 @@ npm start //即可在本地运行
 
 ### nodemon
 
-```sh
-npm install npm
-```
-
-用于托管运行项目
+用于debug项目，实现边debug代码，边更新到运行中的应用
 https://nodemon.io/
 
 ## 待续
