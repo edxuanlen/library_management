@@ -1,5 +1,15 @@
 # 图书管理系统
 
+## 使用方法
+
+```sh
+git clone https://github.com/edxuanlen/library_management.git
+cd library_management
+npm start //即可在本地运行
+
+如果想托管后台也可以用
+```
+
 ## 需求分析
 
 - 服务对象分析:
@@ -59,6 +69,10 @@
 ## Debug
 
 ### nodemon
+
+```sh
+npm install npm
+```
 
 用于托管运行项目
 https://nodemon.io/
