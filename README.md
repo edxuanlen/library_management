@@ -60,8 +60,10 @@
 
 ### nodemon
 
+用于托管运行项目
 https://nodemon.io/
 
+## 待续
 
 项目中的bug 使用BUGWAIT标注 等待修复
 
